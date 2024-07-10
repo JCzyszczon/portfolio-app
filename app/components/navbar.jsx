@@ -22,7 +22,7 @@ function Navbar() {
   }, [navState]);
 
   return (
-    <header className='lg:w-full w-[96%] max-w-5xl fixed left-1/2 -translate-x-1/2 sm:top-4 top-2 rounded-2xl duration-200 z-50 flex flex-col justify-start items-center sm:px-3 px-6 sm:py-2 py-3 navbar border border-borderColor'>
+    <header className='lg:w-full w-[96%] max-w-5xl fixed left-1/2 -translate-x-1/2 sm:top-4 top-2 rounded-2xl duration-200 z-50 flex flex-col justify-start items-center sm:py-2 py-3 sm:px-3 px-10 navbar border border-borderColor'>
       <section className='w-full flex justify-between items-center'>
         <Link
           href={"/"}
@@ -53,7 +53,7 @@ function Navbar() {
           <ThemeSwitch />
           <button
             onClick={() => setNavState(!navState)}
-            className='sm:hidden flex'
+            className='sm:hidden flex h-full py-3'
           >
             <span className='flex flex-col gap-[6px] justify-between items-center'>
               <div
@@ -78,7 +78,7 @@ function Navbar() {
         {navState && (
           <motion.section
             initial={{ height: 0 }}
-            animate={{ height: "76vh" }}
+            animate={{ height: "80vh" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.2 }}
             className='w-full sm:hidden flex flex-col justify-between items-center gap-10 overflow-auto'
@@ -101,7 +101,7 @@ function Navbar() {
                 <li>Contact</li>
               </ul>
             </nav>
-            <span className='pb-10 w-full flex gap-8 justify-center text-lg items-center'>
+            <span className='pb-10 w-full flex gap-8 justify-center text-2xl items-center'>
               <FaGithub />
               <FaLinkedin />
               <FaTwitter />
