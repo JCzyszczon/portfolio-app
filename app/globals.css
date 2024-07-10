@@ -81,6 +81,7 @@ body {
 .navbar {
   background-color: var(--glass-color);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition-duration: 200ms;
 }
 

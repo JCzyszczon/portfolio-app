@@ -49,7 +49,7 @@ function Navbar() {
             <li>Contact</li>
           </ul>
         </nav>
-        <section className='flex justify-between items-center gap-4'>
+        <section className='flex justify-between items-center gap-7'>
           <ThemeSwitch />
           <button
             onClick={() => setNavState(!navState)}
@@ -78,7 +78,7 @@ function Navbar() {
         {navState && (
           <motion.section
             initial={{ height: 0 }}
-            animate={{ height: "89vh" }}
+            animate={{ height: "76vh" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.2 }}
             className='w-full sm:hidden flex flex-col justify-between items-center gap-10 overflow-auto'
