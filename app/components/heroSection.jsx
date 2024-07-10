@@ -27,7 +27,7 @@ function HeroSection() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 1.8, ease: "easeInOut" }}
-        className='heroSectionParagraph sm:text-start text-center mt-4'
+        className='heroSectionParagraph sm:text-start text-center sm:mt-4 mt-3'
       >
         I thrive on turning ideas into functional and visually appealing
         websites.{" "}
@@ -40,7 +40,7 @@ function HeroSection() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 1.95, ease: "easeInOut" }}
-        className='w-full flex justify-center items-center mt-10 gap-4 flex-wrap box-border'
+        className='w-full flex justify-center items-center sm:mt-10 mt-6 gap-4 flex-wrap box-border'
       >
         <ScrollLink
           to='aboutMe'
