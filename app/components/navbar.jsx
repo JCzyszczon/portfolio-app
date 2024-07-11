@@ -78,7 +78,7 @@ function Navbar() {
         {navState && (
           <motion.section
             initial={{ height: 0 }}
-            animate={{ height: "100dvh" }}
+            animate={{ height: "91dvh" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.2 }}
             className='w-full sm:hidden flex flex-col justify-between items-center gap-10 overflow-auto'
