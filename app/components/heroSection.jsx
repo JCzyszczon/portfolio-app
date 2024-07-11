@@ -45,6 +45,7 @@ function HeroSection() {
       >
         <ScrollLink
           to='aboutMe'
+          href='/'
           smooth={true}
           duration={300}
           className='bg-textColor hover:bg-hoverButtonColor text-center cursor-pointer duration-200 hover:-translate-y-[2px] border border-textColor hover:border-hoverButtonColor text-backgroundColor sm:text-base text-sm px-6 py-2 rounded-md flex-1 min-w-fit max-w-[210px] box-border'

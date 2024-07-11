@@ -43,7 +43,11 @@ function AboutMe() {
           {activeSection === "Education" && <Education key='education' />}
           {activeSection === "Interests" && <Interests key='interests' />}
         </AnimatePresence>
-        <Image src={BannerPhoto} className='h-full w-auto rounded-xl' />
+        <Image
+          src={BannerPhoto}
+          alt='Banner Photo'
+          className='h-full w-auto rounded-xl'
+        />
       </section>
       <section className='w-full flex flex-col gap-6 justify-start items-start'>
         <h2 className='heroSectionTitle font-bold leading-[1.3] aboutMe w-full sm:text-start text-center'>

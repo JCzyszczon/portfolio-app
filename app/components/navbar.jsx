@@ -37,6 +37,7 @@ function Navbar() {
             <li>
               <ScrollLink
                 to='aboutMe'
+                href='/'
                 smooth={true}
                 duration={300}
                 title='Go to About section'
@@ -54,6 +55,7 @@ function Navbar() {
           <button
             onClick={() => setNavState(!navState)}
             className='sm:hidden flex h-full py-3'
+            title={navState ? "Close Menu" : "Open Menu"}
           >
             <span className='flex flex-col gap-[6px] justify-between items-center'>
               <div
@@ -88,6 +90,7 @@ function Navbar() {
                 <li>
                   <ScrollLink
                     to='aboutMe'
+                    href='/'
                     smooth={true}
                     duration={300}
                     onClick={() => setNavState(false)}
