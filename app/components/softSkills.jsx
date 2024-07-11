@@ -6,7 +6,7 @@ function SoftSkills() {
     <motion.article
       initial={{ height: 0, opacity: 0 }}
       animate={{ height: "100%", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
       className='absolute left-0 bottom-0 w-full h-full navbar rounded-xl p-10'
     >
