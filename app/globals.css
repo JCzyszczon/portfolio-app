@@ -129,41 +129,6 @@ body {
   overflow: visible;
 }
 
-.itemGradient {
-  background: linear-gradient(
-    285.49deg,
-    rgb(148, 151, 157) -14.61%,
-    rgb(118, 124, 175) 106.06%
-  );
-  opacity: var(--opacity);
-}
-
-.banner-section {
-  animation: swipe var(--speed) linear infinite backwards;
-}
-
-@keyframes swipe {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@media (max-width: 640px) {
-  @keyframes swipe {
-    0% {
-      transform: translate(0);
-    }
-
-    100% {
-      transform: translate(-100%);
-    }
-  }
-}
-
 /* Magic Text Styles */
 
 @keyframes background-pan {
@@ -330,4 +295,84 @@ body {
 .vite-gradient {
   background: linear-gradient(45deg, #646cff, #00bfff);
   opacity: var(--opacity);
+}
+
+.popupGradient {
+  background: linear-gradient(45deg, #a94dff, #ff4dcc);
+}
+
+.links::before {
+  transition: 100ms;
+  height: 0px;
+}
+
+.links:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 100ms;
+  height: 1px;
+  background: linear-gradient(45deg, #a94dff, #ff4dcc);
+  transform: translateY(14px);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s;
+  animation-iteration-count: 1;
+}
+
+.aboutMe {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  background-position: 75%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+  position: relative;
+  z-index: 1;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  top: -2.5px;
+  left: -2.5px;
+  right: -2.5px;
+  bottom: -2.5px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 2.5px;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  background-position: 75%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: background-pan 3s linear infinite;
 }

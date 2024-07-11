@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ThemeSwitch from "./themeSwitch";
-import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Logo from "./logo";
 import { Link as ScrollLink } from "react-scroll";
+import AllLinks from "./allLinks";
 
 function Navbar() {
   const [navState, setNavState] = useState(false);
@@ -22,7 +22,7 @@ function Navbar() {
   }, [navState]);
 
   return (
-    <header className='lg:w-full w-[96%] max-w-5xl fixed left-1/2 -translate-x-1/2 sm:top-4 top-2 rounded-2xl duration-200 z-50 flex flex-col justify-start items-center sm:py-2 py-3 sm:px-3 px-10 navbar border border-borderColor'>
+    <header className='lg:w-full w-[96%] max-w-5xl fixed left-1/2 -translate-x-1/2 sm:top-4 top-2 rounded-2xl duration-200 z-50 flex flex-col justify-start items-center sm:py-2 py-3 sm:px-3 px-8 navbar border border-borderColor'>
       <section className='w-full flex justify-between items-center'>
         <Link
           href={"/"}
@@ -49,7 +49,7 @@ function Navbar() {
             <li>Contact</li>
           </ul>
         </nav>
-        <section className='flex justify-between items-center gap-7'>
+        <section className='flex justify-between items-center gap-5'>
           <ThemeSwitch />
           <button
             onClick={() => setNavState(!navState)}
@@ -102,10 +102,7 @@ function Navbar() {
               </ul>
             </nav>
             <span className='pb-10 w-full flex gap-8 justify-center text-2xl items-center'>
-              <FaGithub />
-              <FaLinkedin />
-              <FaTwitter />
-              <FaInstagram />
+              <AllLinks />
             </span>
           </motion.section>
         )}

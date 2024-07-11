@@ -18,7 +18,7 @@ export default function ThemeSwitch() {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className='bg-borderColor px-6 py-2 rounded-lg hover:bg-hoverBorderColor duration-200'
+      className='bg-borderColor sm:px-6 px-5 py-2 rounded-lg hover:bg-hoverBorderColor duration-200'
       title={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"}`}
     >
       {resolvedTheme === "dark" ? (

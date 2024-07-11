@@ -3,6 +3,7 @@ import React from "react";
 import MagicText from "./magicText";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function HeroSection() {
   return (
@@ -54,10 +55,11 @@ function HeroSection() {
         <a
           href='/Jakub-Czyszczoń-CV.pdf'
           download='Jakub-Czyszczoń-CV.pdf'
-          className='border border-textColor hover:border-hoverButtonColor hover:-translate-y-[2px] duration-200 sm:text-base text-sm bg-transparent px-6 py-2 rounded-md flex-1 min-w-fit max-w-[210px] text-center box-border'
-          title='Download PDF'
+          className='border border-textColor hover:border-hoverButtonColor hover:-translate-y-[2px] duration-200 sm:text-base text-sm bg-transparent px-6 py-2 rounded-md flex justify-center items-center gap-2 flex-1 min-w-fit max-w-[210px] text-center box-border'
+          title='Download CV'
         >
-          Download CV
+          <span>Resume</span>
+          <FaExternalLinkAlt />
         </a>
       </motion.section>
     </section>
