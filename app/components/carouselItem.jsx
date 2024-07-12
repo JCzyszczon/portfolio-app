@@ -11,7 +11,7 @@ function CarouselItem({ children, itemDelay, itemGradient }) {
       className='aspect-square sm:rounded-2xl rounded-xl itemStyles sm:w-[74px] w-[48px] sm:mx-4 mx-3 relative flex justify-center items-center overflow-hidden'
     >
       <span
-        className={`absolute w-[50%] aspect-square left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 itemSettings ${itemGradient}`}
+        className={`absolute w-[25%] aspect-square left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 itemSettings ${itemGradient}`}
       ></span>
       {children}
     </motion.div>

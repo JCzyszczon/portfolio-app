@@ -1,20 +1,48 @@
 import React from "react";
 import SkillsContainer from "./skillsContainer";
+import { FaPeopleGroup, FaBusinessTime, FaStopwatch } from "react-icons/fa6";
+import { GiBrain } from "react-icons/gi";
+import { IoChatboxEllipses, IoColorWand } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 function SoftSkills() {
+  const skills = [
+    {
+      icon: <IoChatboxEllipses className='text-2xl' />,
+      label: "Communication",
+    },
+    { icon: <GiBrain className='text-2xl' />, label: "Problem-solving" },
+    { icon: <FaBusinessTime className='text-2xl' />, label: "Time management" },
+    { icon: <FaPeopleGroup className='text-2xl' />, label: "Teamwork" },
+    { icon: <IoColorWand className='text-2xl' />, label: "Creativity" },
+    { icon: <FaStopwatch className='text-2xl' />, label: "Quick learner" },
+  ];
+
   return (
     <SkillsContainer>
-      <h3 className='text-xl text-center font-semibold bg-textColor text-backgroundColor w-fit rounded-full px-6 py-1'>
-        Soft skills
-      </h3>
-      <ul className='mt-10 flex flex-col justify-start items-start gap-4'>
-        <li>Communication</li>
-        <li>Problem-solving</li>
-        <li>Time management</li>
-        <li>Teamwork</li>
-        <li>Creativity</li>
-        <li>Quick learner</li>
-      </ul>
+      <span className='w-full flex justify-center items-center'>
+        <h3 className='text-base text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
+          Soft skills
+        </h3>
+      </span>
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ staggerChildren: 0.1 }}
+        className='mt-10 flex flex-col justify-start items-start gap-6 listSkills'
+      >
+        {skills.map((skill, index) => (
+          <motion.li
+            key={skill.label}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, delay: 0.25 + index * 0.1 }}
+            className='flex gap-2'
+          >
+            {skill.icon} {skill.label}
+          </motion.li>
+        ))}
+      </motion.ul>
     </SkillsContainer>
   );
 }

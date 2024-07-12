@@ -10,33 +10,19 @@ import { AnimatePresence, motion } from "framer-motion";
 
 function AboutMe() {
   const [activeSection, setActiveSection] = useState(null);
-  const [previousSection, setPreviousSection] = useState(null);
 
   const handleButtonClick = (section) => {
-    setPreviousSection(activeSection);
     setActiveSection((prevSection) =>
       prevSection === section ? null : section
     );
   };
 
-  const renderActiveSection = () => {
-    switch (activeSection) {
-      case "Soft Skills":
-        return <SoftSkills />;
-      case "Education":
-        return <Education />;
-      case "Interests":
-        return <Interests />;
-      default:
-        return <></>;
-    }
-  };
-
   return (
     <section
       id='aboutMe'
-      className='lg:w-full h-full w-[96%] max-w-5xl flex sm:flex-row flex-col-reverse gap-10 py-24 px-2'
+      className='lg:w-full h-full w-[96%] max-w-5xl flex sm:flex-row flex-col-reverse gap-10 sm:py-24 py-20 px-2 relative border-b-2 border-borderColor'
     >
+      <span className='absolute w-[200px] aspect-square z-[-1] rounded-full -left-12 top-1/3 blobGradient blur-[160px]'></span>
       <section className='w-full flex justify-center items-center relative overflow-hidden'>
         <AnimatePresence>
           {activeSection === "Soft Skills" && <SoftSkills key='soft-skills' />}
@@ -46,7 +32,8 @@ function AboutMe() {
         <Image
           src={BannerPhoto}
           alt='Banner Photo'
-          className='h-full w-auto rounded-xl'
+          quality={100}
+          className='h-full sm:w-auto w-full rounded-xl object-cover sm:max-h-full max-h-[400px]'
         />
       </section>
       <section className='w-full flex flex-col gap-6 justify-start items-start'>
@@ -60,23 +47,25 @@ function AboutMe() {
           evolve as a Frontend developer, however I am also interested in server
           communication and databases.
         </p>
-        <section className='w-full flex justify-evenly items-center flex-wrap text-sm gap-2'>
+        <section className='w-full flex justify-evenly items-center flex-wrap text-sm gap-2 mt-4'>
           <StandardButton
-            title='Soft Skills'
+            title={
+              activeSection == "Soft Skills" ? "Close Panel" : "Open Panel"
+            }
             onClick={() => handleButtonClick("Soft Skills")}
             isActive={activeSection === "Soft Skills"}
           >
             Soft skills
           </StandardButton>
           <StandardButton
-            title='Education'
+            title={activeSection == "Education" ? "Close Panel" : "Open Panel"}
             onClick={() => handleButtonClick("Education")}
             isActive={activeSection === "Education"}
           >
             Education
           </StandardButton>
           <StandardButton
-            title='Interests'
+            title={activeSection == "Interests" ? "Close Panel" : "Open Panel"}
             onClick={() => handleButtonClick("Interests")}
             isActive={activeSection === "Interests"}
           >

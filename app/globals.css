@@ -376,3 +376,20 @@ body {
   mask-composite: exclude;
   animation: background-pan 3s linear infinite;
 }
+
+.blobGradient {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+}
+
+.listSkills > li {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  gap: 1.5rem;
+}

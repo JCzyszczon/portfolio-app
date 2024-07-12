@@ -34,6 +34,7 @@ function Popup() {
           Looking for more?
           <IoCloseOutline
             className='absolute right-1 top-1 text-base cursor-pointer'
+            title='Close Popup'
             onClick={() => setClosePopup(true)}
           />
           <span className='absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[51%] border-b-[15px] border-b-borderColor border-solid border-r-[15px] border-r-transparent -rotate-45'></span>
