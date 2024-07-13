@@ -20,6 +20,7 @@ module.exports = {
         hoverBorderColor: "var(--hover-border-color)",
         linkColor: "var(--link-color)",
         hoverButtonColor: "var(--hover-button-color)",
+        lessImportantTextColor: "var(--less-important-text-color)",
       },
     },
   },

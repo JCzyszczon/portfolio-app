@@ -19,7 +19,7 @@ function Interests() {
   return (
     <SkillsContainer>
       <span className='w-full flex justify-center items-center'>
-        <h3 className='text-base text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
+        <h3 className='sm:text-base text-[15px] text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
           Interests
         </h3>
       </span>
@@ -27,7 +27,7 @@ function Interests() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ staggerChildren: 0.1 }}
-        className='mt-10 flex flex-col justify-start items-start gap-6 listSkills'
+        className='sm:mt-10 mt-8 flex flex-col justify-start items-start sm:gap-6 gap-4'
       >
         {skills.map((skill, index) => (
           <motion.li
@@ -35,7 +35,7 @@ function Interests() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.25 + index * 0.1 }}
-            className='flex gap-2'
+            className='flex justify-start items-center  sm:gap-6 gap-4 sm:text-base text-[15px]'
           >
             {skill.icon} {skill.label}
           </motion.li>

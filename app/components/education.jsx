@@ -1,67 +1,59 @@
 import React from "react";
 import SkillsContainer from "./skillsContainer";
 import { motion } from "framer-motion";
-import { FaBook, FaBasketball, FaMicrophone, FaLaptop } from "react-icons/fa6";
-import { RiMovie2Fill } from "react-icons/ri";
+import { FaSchool } from "react-icons/fa6";
+import { IoSchool } from "react-icons/io5";
 
 function Education() {
-  const skills = [
+  const education = [
     {
-      icon: <FaLaptop className='text-2xl' />,
-      label: "Modern UI design",
+      icon: <FaSchool className='text-2xl' />,
+      school: "LO im. Hugona Kołłątaja, Jordanów",
+      heading: "Math Profile",
+      years: "Sep 2017 - May 2020",
     },
-    { icon: <FaMicrophone className='text-2xl' />, label: "Politics" },
-    { icon: <FaBasketball className='text-2xl' />, label: "Basketball" },
+    {
+      icon: <IoSchool className='text-2xl' />,
+      school: "AGH, Kraków",
+      heading: "Computer Science in Engineering",
+      years: "Oct 2020 - current",
+    },
   ];
 
   return (
     <SkillsContainer>
       <span className='w-full flex justify-center items-center'>
-        <h3 className='text-base text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
+        <h3 className='sm:text-base text-[15px] text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
           Education
         </h3>
       </span>
-      <motion.ul
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ staggerChildren: 0.1 }}
-        className='mt-10 flex flex-col justify-start items-start gap-6 listSkills'
+        className='sm:mt-10 mt-8 w-full flex flex-col justify-start items-start sm:gap-8 gap-4'
       >
-        {skills.map((skill, index) => (
-          <motion.li
-            key={skill.label}
+        {education.map((item, index) => (
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.25 + index * 0.1 }}
-            className='flex gap-2'
+            transition={{ duration: 0.2, delay: 0.35 + index * 0.1 }}
+            key={index}
+            className='w-full flex gap-2 justify-start items-center'
           >
-            {skill.icon} {skill.label}
-          </motion.li>
+            {item.icon}
+            <div className='w-full flex flex-col sm:gap-2 gap-1 justify-center items-start'>
+              <p className='sm:text-sm text-xs text-lessImportantTextColor'>
+                {item.school}
+              </p>
+              <h4 className='font-medium text-base'>{item.heading}</h4>
+              <p className='text-xs text-lessImportantTextColor'>
+                {item.years}
+              </p>
+            </div>
+          </motion.section>
         ))}
-      </motion.ul>
-      <span className='w-full flex justify-center items-center'>
-        <h3 className='text-base text-center text-nowrap bg-textColor rounded-md text-backgroundColor px-6 py-1'>
-          Languages
-        </h3>
-      </span>
-      <motion.ul
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ staggerChildren: 0.1 }}
-        className='mt-10 flex flex-col justify-start items-start gap-6 listSkills'
-      >
-        {skills.map((skill, index) => (
-          <motion.li
-            key={skill.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.25 + index * 0.1 }}
-            className='flex gap-2'
-          >
-            {skill.icon} {skill.label}
-          </motion.li>
-        ))}
-      </motion.ul>
+      </motion.section>
     </SkillsContainer>
   );
 }

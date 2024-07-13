@@ -20,7 +20,7 @@ function AboutMe() {
   return (
     <section
       id='aboutMe'
-      className='lg:w-full h-full w-[96%] max-w-5xl flex sm:flex-row flex-col-reverse gap-10 sm:py-24 py-20 px-2 relative border-b-2 border-borderColor'
+      className='lg:w-full h-full w-[96%] max-w-5xl flex sm:flex-row flex-col-reverse gap-10 sm:py-32 py-20 px-2 relative border-b-2 border-borderColor'
     >
       <span className='absolute w-[200px] aspect-square z-[-1] rounded-full -left-12 top-1/3 blobGradient blur-[160px]'></span>
       <section className='w-full flex justify-center items-center relative overflow-hidden'>

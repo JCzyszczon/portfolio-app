@@ -26,7 +26,7 @@ function SkillsContainer({ children }) {
           : { height: "10%", opacity: 0 }
       }
       transition={{ duration: 0.3 }}
-      className='absolute left-0 bottom-0 w-full h-full navbar rounded-xl p-10'
+      className='absolute left-0 bottom-0 w-full min-h-fit navbar rounded-xl p-10 overflow-y-auto lg:no-scrollbar'
     >
       {children}
     </motion.article>
