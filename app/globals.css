@@ -30,7 +30,9 @@
   --pink: rgb(244, 143, 177);
   --opacity: 0;
   --less-important-text-color: #444;
-  --card-color: rgb(23, 23, 23);
+  --border-skills: rgba(0, 0, 0, 0.4);
+  --border-card: rgba(0, 0, 0, 0.12);
+  --cards-text: #636466;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,7 +50,9 @@
     --item-box-shadow: rgba(255, 255, 255, 0.25);
     --opacity: 1;
     --less-important-text-color: #ddd;
-    --card-color: rgb(23, 23, 23);
+    --border-skills: rgba(255, 255, 255, 0.4);
+    --border-card: rgba(255, 255, 255, 0.12);
+    --cards-text: #969799;
   }
 }
 
@@ -66,7 +70,9 @@
   --item-box-shadow: rgba(255, 255, 255, 0.25);
   --opacity: 1;
   --less-important-text-color: #ddd;
-  --card-color: rgb(23, 23, 23);
+  --border-skills: rgba(255, 255, 255, 0.4);
+  --border-card: rgba(255 255, 255, 0.12);
+  --cards-text: #969799;
 }
 
 :root[class="light"] {
@@ -83,7 +89,9 @@
   --item-box-shadow: rgba(120, 120, 120, 0.25);
   --opacity: 0;
   --less-important-text-color: #444;
-  --card-color: rgb(23, 23, 23);
+  --border-skills: rgba(0, 0, 0, 0.4);
+  --border-card: rgba(0, 0, 0, 0.12);
+  --cards-text: #636466;
 }
 
 body {
@@ -423,11 +431,10 @@ body {
 /* Skills section */
 
 #cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-width: 916px;
-  width: calc(100% - 20px);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  width: 100%;
 }
 
 #cards:hover > .card::after {
@@ -435,14 +442,15 @@ body {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  background-color: var(--border-card);
+  border-radius: 12px;
+  user-select: none;
   cursor: pointer;
   display: flex;
   height: 260px;
   flex-direction: column;
   position: relative;
-  width: 300px;
+  width: 100%;
 }
 
 .card:hover::before {
@@ -465,7 +473,7 @@ body {
 .card::before {
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
+    rgba(255, 116, 236, 0.06),
     transparent 40%
   );
   z-index: 3;
@@ -474,20 +482,26 @@ body {
 .card::after {
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
+    var(--border-skills),
     transparent 40%
   );
   z-index: 1;
 }
 
 .card > .card-content {
-  background-color: var(--card-color);
+  background: linear-gradient(
+    155.91deg,
+    var(--item-background-1) 21.92%,
+    var(--item-background-2) 77.49%
+  );
   border-radius: inherit;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   inset: 1px;
-  padding: 10px;
+  padding: 2rem 1.25rem;
   position: absolute;
   z-index: 2;
+  justify-content: end;
+  align-items: center;
 }

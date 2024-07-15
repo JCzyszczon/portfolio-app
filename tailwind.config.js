@@ -21,6 +21,7 @@ module.exports = {
         linkColor: "var(--link-color)",
         hoverButtonColor: "var(--hover-button-color)",
         lessImportantTextColor: "var(--less-important-text-color)",
+        cardsText: "var(--cards-text)",
       },
     },
   },

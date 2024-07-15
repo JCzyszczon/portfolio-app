@@ -1,47 +1,83 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import icons from "../data/icons";
-import { FaPeopleGroup, FaBusinessTime, FaStopwatch } from "react-icons/fa6";
+import {
+  FaPeopleGroup,
+  FaReact,
+  FaLaptop,
+  FaLayerGroup,
+  FaDocker,
+  FaJenkins,
+  FaGit,
+  FaPlay,
+  FaCode,
+} from "react-icons/fa6";
+import { FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
+import {
+  SiFramer,
+  SiMysql,
+  SiNextdotjs,
+  SiSupabase,
+  SiTailwindcss,
+} from "react-icons/si";
+import { HiDatabase } from "react-icons/hi";
+import { IoPlay } from "react-icons/io5";
+import { CiCircleMore } from "react-icons/ci";
+import { IoMdMore } from "react-icons/io";
 
 const CardsContainer = () => {
   const cardsRef = useRef(null);
 
   const data = [
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "Frontend skills",
+      description: "HTML, CSS, JavaScript",
+      mainIcon: [
+        <FaHtml5 className='text-4xl opacity-75 ' />,
+        <FaCss3Alt className='text-4xl opacity-75 ' />,
+        <FaJsSquare className='text-4xl opacity-75' />,
+      ],
+      sideIcon: <FaCode className='text-2xl' />,
     },
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "Frameworks",
+      description: "Next, React, Tailwind",
+      mainIcon: [
+        <FaReact className='text-4xl opacity-75 ' />,
+        <SiNextdotjs className='text-4xl opacity-75 ' />,
+        <SiTailwindcss className='text-4xl opacity-75' />,
+      ],
+      sideIcon: <FaLaptop className='text-2xl' />,
     },
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "Animations",
+      description: "Framer Motion",
+      mainIcon: [<SiFramer className='text-4xl opacity-75 ' />],
+      sideIcon: <FaLayerGroup className='text-2xl' />,
     },
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "Database",
+      description: "MySQL, Supabase",
+      mainIcon: [
+        <SiMysql className='text-4xl opacity-75 ' />,
+        <SiSupabase className='text-4xl opacity-75 ' />,
+      ],
+      sideIcon: <HiDatabase className='text-2xl' />,
     },
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "Automation tools",
+      description: "Docker, Jenkins, Git",
+      mainIcon: [
+        <FaDocker className='text-4xl opacity-75 ' />,
+        <FaJenkins className='text-4xl opacity-75 ' />,
+        <FaGit className='text-4xl opacity-75 ' />,
+      ],
+      sideIcon: <IoPlay className='text-2xl' />,
     },
     {
-      title: "Apartments",
-      description: "Places to be apart. Wait, what?",
-      mainIcon: <FaPeopleGroup className='text-2xl' />,
-      sideIcon: <FaPeopleGroup className='text-xl' />,
+      title: "And many more..",
+      description: "Java, C++, etc..",
+      mainIcon: [<CiCircleMore className='text-4xl opacity-75 ' />],
+      sideIcon: <IoMdMore className='text-2xl' />,
     },
   ];
 
@@ -75,14 +111,18 @@ const CardsContainer = () => {
   return (
     <section id='cards' ref={cardsRef}>
       {data.map((item, index) => (
-        <article className='card' key={index}>
+        <article className='card drop-shadow-md' key={index}>
           <div className='card-content'>
-            {item.mainIcon}
-            <section className='w-full flex justify-between items-center'>
+            <span className='absolute left-1/2 top-1/3 -translate-x-1/2 flex gap-4'>
+              {item.mainIcon.map((icon, iconIndex) => (
+                <React.Fragment key={iconIndex}>{icon}</React.Fragment>
+              ))}
+            </span>
+            <section className='w-full flex justify-between items-center gap-4'>
               {item.sideIcon}
-              <div className='w-full flex justify-center items-start'>
-                {item.title}
-                {item.description}
+              <div className='w-full flex flex-col justify-center items-start gap-[2px]'>
+                <h3 className='text-lg font-semibold'>{item.title}</h3>
+                <p className='text-sm text-cardsText'>{item.description}</p>
               </div>
             </section>
           </div>
@@ -93,38 +133,3 @@ const CardsContainer = () => {
 };
 
 export default CardsContainer;
-
-/*
-const cardsContainerRef = useRef(null);
-  const cardRefs = useRef([]);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      cardRefs.current.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-      });
-    };
-
-    const cardsContainer = cardsContainerRef.current;
-    cardsContainer.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      cardsContainer.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  return (
-    <div ref={cardsContainerRef} className={styles.cardsContainer} id='cards'>
-      {[...Array(5)].map((_, index) => (
-        <Card key={index} ref={(el) => (cardRefs.current[index] = el)}>
-          Card {index + 1}
-        </Card>
-      ))}
-    </div>
-  );
-  */
