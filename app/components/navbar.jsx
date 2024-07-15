@@ -40,12 +40,22 @@ function Navbar() {
                 href='/'
                 smooth={true}
                 duration={300}
-                title='Go to About section'
+                title='Go to About me section'
               >
                 About
               </ScrollLink>
             </li>
-            <li>Skills</li>
+            <li>
+              <ScrollLink
+                to='skills'
+                href='/'
+                smooth={true}
+                duration={300}
+                title='Go to Skills section'
+              >
+                Skills
+              </ScrollLink>
+            </li>
             <li>Projects</li>
             <li>Contact</li>
           </ul>
@@ -94,12 +104,23 @@ function Navbar() {
                     smooth={true}
                     duration={300}
                     onClick={() => setNavState(false)}
-                    title='Go to About section'
+                    title='Go to About me section'
                   >
                     About
                   </ScrollLink>
                 </li>
-                <li>Skills</li>
+                <li>
+                  <ScrollLink
+                    to='skills'
+                    href='/'
+                    smooth={true}
+                    duration={300}
+                    onClick={() => setNavState(false)}
+                    title='Go to Skills section'
+                  >
+                    Skills
+                  </ScrollLink>
+                </li>
                 <li>Projects</li>
                 <li>Contact</li>
               </ul>

@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 function HeroSection() {
   return (
-    <section className='w-[80%] flex flex-col justify-center sm:items-start items-center gap-2'>
+    <section className='sm:w-[80%] w-full sm:px-0 px-2 flex flex-col justify-center sm:items-start items-center gap-2'>
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
