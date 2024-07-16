@@ -245,7 +245,7 @@ body {
   line-height: 1.75rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .heroSectionText {
     font-size: clamp(1rem, 5vw, 1.5rem);
   }
@@ -504,4 +504,21 @@ body {
   z-index: 2;
   justify-content: end;
   align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 639px) {
+  .card {
+    height: 180px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  }
+}
+
+@media (max-width: 469px) {
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import BannerPhoto from "../img/about-image.webp";
+import LogoGradient from "../img/logo-gradient.png";
 import StandardButton from "./standardButton";
 import SoftSkills from "./softSkills";
 import Education from "./education";
@@ -29,21 +29,26 @@ function AboutMe() {
         ref={ref}
         className='w-full flex justify-center items-center relative overflow-hidden rounded-xl'
       >
-        <AnimatePresence>
-          {activeSection === "Soft Skills" && <SoftSkills key='soft-skills' />}
-          {activeSection === "Education" && <Education key='education' />}
-          {activeSection === "Interests" && <Interests key='interests' />}
-        </AnimatePresence>
-        <Image
-          src={BannerPhoto}
-          alt='Banner Photo'
-          quality={100}
-          style={{
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-          }}
-          className='h-full sm:w-auto w-full rounded-xl object-cover sm:max-h-full max-h-[400px]'
-        />
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView && { opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.6, ease: "easeInOut" }}
+          className='w-full sm:aspect-[95/100] aspect-[10/5] sm:min-h-[420px] min-h-[370px] rounded-2xl itemStyles flex flex-col justify-end items-center overflow-hidden relative'
+        >
+          <AnimatePresence>
+            {activeSection === "Soft Skills" && (
+              <SoftSkills key='soft-skills' />
+            )}
+            {activeSection === "Education" && <Education key='education' />}
+            {activeSection === "Interests" && <Interests key='interests' />}
+          </AnimatePresence>
+          <Image
+            src={LogoGradient}
+            alt='Logo Gradient'
+            className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square w-[80%] max-w-[250px]'
+          />
+          <span className='absolute w-[140px] aspect-square z-[12] rounded-full bottom-0 right-0 blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
+        </motion.section>
       </section>
       <section
         ref={ref}
@@ -61,13 +66,18 @@ function AboutMe() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView && { opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4, ease: "easeInOut" }}
-          className='heroSectionParagraph text-justify'
+          className='heroSectionParagraph sm:text-start text-center'
         >
-          I am a third-year student of Computer Science in Engineering at the
-          AGH University of Science and Technology in Kraków. I am looking for
-          my first professional experience in the IT industry. I would like to
-          evolve as a Frontend developer, however I am also interested in server
-          communication and databases.
+          <span className='sm:inline hidden'>
+            I am a student of Computer Science in Engineering at the AGH in
+            Kraków.
+          </span>{" "}
+          I am passionate about Frontend technologies and enjoy creating
+          intuitive and beautiful user experiences.{" "}
+          <span className='sm:inline hidden'>
+            I am always eager to learn and collaborate on innovative projects
+            that make a positive impact.
+          </span>
         </motion.p>
         <motion.section
           initial={{ opacity: 0, y: 10 }}
