@@ -3,6 +3,7 @@ import AboutMe from "./components/aboutMe";
 import Socials from "./components/socials";
 import Popup from "./components/popup";
 import Skills from "./components/skills";
+import Projects from "./components/projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Socials />
       <AboutMe />
       <Skills />
+      <Projects />
     </main>
   );
 }

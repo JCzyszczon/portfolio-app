@@ -45,7 +45,9 @@ function AboutMe() {
           <Image
             src={LogoGradient}
             alt='Logo Gradient'
-            className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square w-[80%] max-w-[250px]'
+            quality={100}
+            title='Logo gradient'
+            className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[250px]'
           />
           <span className='absolute w-[140px] aspect-square z-[12] rounded-full bottom-0 right-0 blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
         </motion.section>

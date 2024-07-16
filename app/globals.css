@@ -522,3 +522,19 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Projects section */
+
+.projects {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  background-position: 75%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

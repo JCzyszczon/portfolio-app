@@ -1,4 +1,3 @@
-import { delay } from "framer-motion";
 import {
   FaReact,
   FaHtml5,

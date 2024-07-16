@@ -26,15 +26,15 @@ const skillsData = [
     description: "HTML, CSS, JavaScript",
     mainIcon: [
       <FaHtml5
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='1'
       />,
       <FaCss3Alt
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='2'
       />,
       <FaJsSquare
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='3'
       />,
     ],
@@ -45,15 +45,15 @@ const skillsData = [
     description: "Next, React, Tailwind",
     mainIcon: [
       <FaReact
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='4'
       />,
       <SiNextdotjs
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='5'
       />,
       <SiTailwindcss
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='6'
       />,
     ],
@@ -64,7 +64,7 @@ const skillsData = [
     description: "Framer Motion",
     mainIcon: [
       <SiFramer
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='7'
       />,
     ],
@@ -75,11 +75,11 @@ const skillsData = [
     description: "MySQL, Supabase",
     mainIcon: [
       <SiMysql
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='8'
       />,
       <SiSupabase
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='9'
       />,
     ],
@@ -90,15 +90,15 @@ const skillsData = [
     description: "Docker, Jenkins, Git",
     mainIcon: [
       <FaDocker
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='10'
       />,
       <FaJenkins
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='11'
       />,
       <FaGit
-        className='sm:text-4xl text-8xl sm:flex hidden sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:flex hidden sm:opacity-75 opacity-10'
         key='12'
       />,
     ],
@@ -109,7 +109,7 @@ const skillsData = [
     description: "Java, C++, etc..",
     mainIcon: [
       <CiCircleMore
-        className='sm:text-4xl text-8xl sm:opacity-75 opacity-10'
+        className='sm:text-4xl text-6xl sm:opacity-75 opacity-10'
         key='13'
       />,
     ],

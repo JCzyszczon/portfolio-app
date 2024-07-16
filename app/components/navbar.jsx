@@ -56,7 +56,17 @@ function Navbar() {
                 Skills
               </ScrollLink>
             </li>
-            <li>Projects</li>
+            <li>
+              <ScrollLink
+                to='projects'
+                href='/'
+                smooth={true}
+                duration={300}
+                title='Go to Projects section'
+              >
+                Projects
+              </ScrollLink>
+            </li>
             <li>Contact</li>
           </ul>
         </nav>
@@ -121,7 +131,18 @@ function Navbar() {
                     Skills
                   </ScrollLink>
                 </li>
-                <li>Projects</li>
+                <li>
+                  <ScrollLink
+                    to='projects'
+                    href='/'
+                    smooth={true}
+                    duration={300}
+                    onClick={() => setNavState(false)}
+                    title='Go to Projects section'
+                  >
+                    Projects
+                  </ScrollLink>
+                </li>
                 <li>Contact</li>
               </ul>
             </nav>

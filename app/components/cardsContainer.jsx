@@ -51,7 +51,7 @@ const CardsContainer = () => {
           key={index}
         >
           <div className='card-content'>
-            <span className='absolute left-1/2 z-[8] sm:top-1/3 top-[25%] -translate-x-1/2 flex gap-4'>
+            <span className='absolute left-1/2 z-[8] sm:top-1/3 top-1/3 -translate-x-1/2 sm:-translate-y-0 -translate-y-1/2 flex gap-4'>
               {item.mainIcon.map((icon, iconIndex) => (
                 <React.Fragment key={iconIndex}>{icon}</React.Fragment>
               ))}
