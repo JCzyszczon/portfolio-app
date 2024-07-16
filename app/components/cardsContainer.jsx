@@ -27,14 +27,16 @@ import { IoMdMore } from "react-icons/io";
 const CardsContainer = () => {
   const cardsRef = useRef(null);
 
+  // TODO: Przeniesc "data" do innego pliku, zeby nie zasmiecac komponentu, zmniejszyc rozmiar kart gdy jest < 640px
+
   const data = [
     {
       title: "Frontend skills",
       description: "HTML, CSS, JavaScript",
       mainIcon: [
-        <FaHtml5 className='text-4xl opacity-75 ' />,
-        <FaCss3Alt className='text-4xl opacity-75 ' />,
-        <FaJsSquare className='text-4xl opacity-75' />,
+        <FaHtml5 className='text-4xl opacity-75' key='1' />,
+        <FaCss3Alt className='text-4xl opacity-75' key='2' />,
+        <FaJsSquare className='text-4xl opacity-75' key='3' />,
       ],
       sideIcon: <FaCode className='text-2xl' />,
     },
@@ -42,24 +44,24 @@ const CardsContainer = () => {
       title: "Frameworks",
       description: "Next, React, Tailwind",
       mainIcon: [
-        <FaReact className='text-4xl opacity-75 ' />,
-        <SiNextdotjs className='text-4xl opacity-75 ' />,
-        <SiTailwindcss className='text-4xl opacity-75' />,
+        <FaReact className='text-4xl opacity-75' key='4' />,
+        <SiNextdotjs className='text-4xl opacity-75' key='5' />,
+        <SiTailwindcss className='text-4xl opacity-75' key='6' />,
       ],
       sideIcon: <FaLaptop className='text-2xl' />,
     },
     {
       title: "Animations",
       description: "Framer Motion",
-      mainIcon: [<SiFramer className='text-4xl opacity-75 ' />],
+      mainIcon: [<SiFramer className='text-4xl opacity-75' key='7' />],
       sideIcon: <FaLayerGroup className='text-2xl' />,
     },
     {
       title: "Database",
       description: "MySQL, Supabase",
       mainIcon: [
-        <SiMysql className='text-4xl opacity-75 ' />,
-        <SiSupabase className='text-4xl opacity-75 ' />,
+        <SiMysql className='text-4xl opacity-75' key='8' />,
+        <SiSupabase className='text-4xl opacity-75' key='9' />,
       ],
       sideIcon: <HiDatabase className='text-2xl' />,
     },
@@ -67,16 +69,16 @@ const CardsContainer = () => {
       title: "Automation tools",
       description: "Docker, Jenkins, Git",
       mainIcon: [
-        <FaDocker className='text-4xl opacity-75 ' />,
-        <FaJenkins className='text-4xl opacity-75 ' />,
-        <FaGit className='text-4xl opacity-75 ' />,
+        <FaDocker className='text-4xl opacity-75' key='10' />,
+        <FaJenkins className='text-4xl opacity-75' key='11' />,
+        <FaGit className='text-4xl opacity-75' key='12' />,
       ],
       sideIcon: <IoPlay className='text-2xl' />,
     },
     {
       title: "And many more..",
       description: "Java, C++, etc..",
-      mainIcon: [<CiCircleMore className='text-4xl opacity-75 ' />],
+      mainIcon: [<CiCircleMore className='text-4xl opacity-75' key='13' />],
       sideIcon: <IoMdMore className='text-2xl' />,
     },
   ];
