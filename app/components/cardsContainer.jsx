@@ -51,10 +51,8 @@ const CardsContainer = () => {
           key={index}
         >
           <div className='card-content'>
-            <span className='absolute left-1/2 z-[8] sm:top-1/3 top-1/3 -translate-x-1/2 sm:-translate-y-0 -translate-y-1/2 flex gap-4'>
-              {item.mainIcon.map((icon, iconIndex) => (
-                <React.Fragment key={iconIndex}>{icon}</React.Fragment>
-              ))}
+            <span className='absolute left-1/2 z-[8] top-1/3 -translate-x-1/2 sm:-translate-y-1/3 -translate-y-1/2 flex gap-4'>
+              {item.mainIcon}
             </span>
             <section className='w-full flex sm:flex-row flex-col z-[8] justify-between items-center sm:gap-4 gap-3'>
               {item.sideIcon}
@@ -62,7 +60,7 @@ const CardsContainer = () => {
                 <h3 className='sm:text-lg text-base font-semibold'>
                   {item.title}
                 </h3>
-                <p className='sm:text-sm text-xs text-cardsText'>
+                <p className='sm:text-sm text-xs text-cardsText whitespace-nowrap inline-block w-[calc(100%)] text-ellipsis overflow-hidden'>
                   {item.description}
                 </p>
               </div>
