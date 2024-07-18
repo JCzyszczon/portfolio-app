@@ -16,8 +16,9 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel='apple-touch-icon'
-          sizes='180x180'
-          href='./apple-touch-icon.png'
+          href='/apple-icon?<generated>'
+          type='image/<generated>'
+          sizes='<generated>'
         />
         <link
           rel='icon'
