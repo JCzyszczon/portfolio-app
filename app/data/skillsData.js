@@ -2,7 +2,7 @@ import { FaLaptop, FaLayerGroup, FaDocker, FaCode } from "react-icons/fa6";
 import { FaJsSquare } from "react-icons/fa";
 import { SiFramer, SiNextdotjs, SiSupabase } from "react-icons/si";
 import { HiDatabase } from "react-icons/hi";
-import { IoPlay } from "react-icons/io5";
+import { IoPlay, IoDocument } from "react-icons/io5";
 import { CiCircleMore } from "react-icons/ci";
 import { IoMdMore } from "react-icons/io";
 
@@ -42,9 +42,9 @@ const skillsData = [
     sideIcon: <IoPlay className='text-2xl sm:flex hidden' />,
   },
   {
-    title: "And many more..",
-    description: "Java, C++, etc..",
-    mainIcon: <CiCircleMore className='text-6xl sm:opacity-25 opacity-10' />,
+    title: "Many more..",
+    description: "Be sure to check my CV",
+    mainIcon: <IoDocument className='text-6xl sm:opacity-25 opacity-10' />,
     sideIcon: <IoMdMore className='text-2xl sm:flex hidden' />,
   },
 ];

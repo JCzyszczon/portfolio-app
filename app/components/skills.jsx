@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useRef } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import CardsContainer from "./cardsContainer";
+import skillsData from "../data/skillsData";
 
 function Skills() {
   const ref = useRef(null);
@@ -12,7 +13,7 @@ function Skills() {
       id='skills'
       className='lg:w-full h-full w-[96%] max-w-5xl flex flex-col sm:gap-12 gap-10 sm:py-32 py-20 px-2 relative border-b-2 border-borderColor justify-center items-center'
     >
-      <span className='absolute w-[200px] aspect-square z-[100] rounded-full -translate-x-1/2 left-1/2 top-1/2 blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
+      <span className='absolute w-[200px] aspect-square z-[100] pointer-events-none rounded-full -translate-x-1/2 left-1/2 top-1/2 blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
       <section
         ref={ref}
         className='sm:w-[80%] w-full flex flex-col justify-start items-start sm:gap-6 gap-3'
@@ -40,7 +41,7 @@ function Skills() {
           </span>
         </motion.p>
       </section>
-      <CardsContainer />
+      <CardsContainer data={skillsData} />
     </section>
   );
 }

@@ -1,6 +1,8 @@
 "use client";
-import React, { useState, useRef } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import CardsContainer from "./cardsContainer";
+import projectsData from "../data/projectsData";
 
 function Projects() {
   const ref = useRef(null);
@@ -9,9 +11,9 @@ function Projects() {
   return (
     <section
       id='projects'
-      className='lg:w-full h-full w-[96%] max-w-5xl flex flex-col sm:gap-12 gap-8 sm:py-32 py-20 px-2 relative border-b-2 border-borderColor justify-center items-center'
+      className='lg:w-full h-full w-[96%] max-w-5xl flex flex-col sm:gap-12 gap-10 sm:py-32 py-20 px-2 relative border-b-2 border-borderColor justify-center items-center'
     >
-      <span className='absolute w-[200px] aspect-square z-[-1] rounded-full -translate-x-1/2 left-1/2 top-1/2 blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
+      <span className='absolute w-[200px] aspect-square z-[10] rounded-full right-0 top-1/2 pointer-events-none blobGradient sm:flex hidden sm:blur-[160px] blur-0'></span>
       <section
         ref={ref}
         className='sm:w-[80%] w-full flex flex-col justify-start items-start sm:gap-6 gap-3'
@@ -39,6 +41,7 @@ function Projects() {
           </span>
         </motion.p>
       </section>
+      <CardsContainer data={projectsData} />
     </section>
   );
 }

@@ -7,7 +7,7 @@ function AllLinks() {
       <a
         target='_blank'
         href='https://github.com/JCzyszczon'
-        className='duration-200 hover:-translate-y-[2px] links'
+        className='duration-200 hover:-translate-y-[2px] py-3 links'
         title='Visit GitHub'
       >
         <FaGithub />
@@ -15,7 +15,7 @@ function AllLinks() {
       <a
         target='_blank'
         href='https://www.linkedin.com/in/jakub-czyszczoń-5265b02a6/'
-        className='duration-200 hover:-translate-y-[2px] links'
+        className='duration-200 hover:-translate-y-[2px] py-3 links'
         title='Visit Linkedin'
       >
         <FaLinkedin />
@@ -23,7 +23,7 @@ function AllLinks() {
       <a
         target='_blank'
         href='https://x.com/czycho_'
-        className='duration-200 hover:-translate-y-[2px] links'
+        className='duration-200 hover:-translate-y-[2px] py-3 links'
         title='Visit Twitter'
       >
         <FaTwitter />
@@ -31,7 +31,7 @@ function AllLinks() {
       <a
         target='_blank'
         href='https://www.instagram.com/czycho_/'
-        className='duration-200 hover:-translate-y-[2px] links'
+        className='duration-200 hover:-translate-y-[2px] py-3 links'
         title='Visit Instagram'
       >
         <FaInstagram />
