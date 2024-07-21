@@ -35,7 +35,7 @@ function Projects() {
           From building scalable web applications to crafting intuitive user
           interfaces, each project reflects my commitment to excellence and
           continuous improvement.
-          <span className='sm:inline hidden'>
+          <span className='sm:inline hidden '>
             Throughout my career, I&apos;ve engaged in diverse projects that
             showcase my passion for innovation and problem-solving.
           </span>
