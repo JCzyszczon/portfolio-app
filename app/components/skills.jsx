@@ -30,7 +30,7 @@ function Skills() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView && { opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4, ease: "easeInOut" }}
-          className='heroSectionParagraph sm:text-start text-center '
+          className='heroSectionParagraph sm:text-start text-center'
         >
           During my journey, I&apos;ve immersed myself in learning and mastering
           new technologies, both academically and independently.
